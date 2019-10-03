@@ -31,7 +31,7 @@ public class DogHouseTest {
 
         DogHouse.remove(1);
 
-        Assert.assertEquals(0, (long) DogHouse.getNumberOfDogs());
+        Assert.assertEquals(0, DogHouse.getNumberOfDogs(), 0.001);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class DogHouseTest {
 
         DogHouse.remove(dog);
 
-        Assert.assertEquals(0, (long) DogHouse.getNumberOfDogs());
+        Assert.assertEquals(0, DogHouse.getNumberOfDogs(), 0.001);
     }
 
     @Test
@@ -69,6 +69,6 @@ public class DogHouseTest {
         DogHouse.add(animal);
 
         // Then
-        Assert.assertEquals(1, (long) DogHouse.getNumberOfDogs());
+        Assert.assertEquals(1, DogHouse.getNumberOfDogs(), 0.001);
     }
 }

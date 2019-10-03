@@ -31,7 +31,7 @@ public class CatHouseTest {
 
         CatHouse.remove(1);
 
-        Assert.assertEquals(0, (long) CatHouse.getNumberOfCats());
+        Assert.assertEquals(0, CatHouse.getNumberOfCats(), 0.001);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class CatHouseTest {
 
         CatHouse.remove(cat);
 
-        Assert.assertEquals(0, (long) CatHouse.getNumberOfCats());
+        Assert.assertEquals(0, CatHouse.getNumberOfCats(), 0.001);
     }
 
     @Test
@@ -69,6 +69,6 @@ public class CatHouseTest {
         CatHouse.add(animal);
 
         // Then
-        Assert.assertEquals(1, (long) CatHouse.getNumberOfCats());
+        Assert.assertEquals(1, CatHouse.getNumberOfCats(), 0.001);
     }
 }
